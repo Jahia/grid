@@ -1,7 +1,6 @@
 <%@ include file="../../common/declarations.jspf" %>
 <jsp:useBean id="colMap" class="java.util.LinkedHashMap"/>
 <template:addResources type="css" resources="960.css"/>
-<template:addResources type="javascript" resources="jquery.min.js"/>
 
 <jcr:nodeProperty node="${currentNode}" name="customColumn" var="customColumn"/>
 <c:set var="nbCols" value="0"/>
