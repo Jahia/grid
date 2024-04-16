@@ -52,7 +52,7 @@
         <version>8.0.0.0</version>
     </parent>
     <artifactId>grid</artifactId>
-	<version>8.1.0-SNAPSHOT</version>
+	<version>8.1.0</version>
     <packaging>bundle</packaging>
     <name>Jahia Grid Pages</name>
     <description>These are the custom module (jahiaPages) for running on a Jahia server.</description>
@@ -60,7 +60,7 @@
         <connection>scm:git:git@github.com:Jahia/grid.git</connection>
         <developerConnection>scm:git:git@github.com:Jahia/grid.git</developerConnection>
         <url>scm:git:git@github.com:Jahia/grid.git</url>
-      <tag>HEAD</tag>
+      <tag>8_1_0</tag>
     </scm>
 
     <properties>
