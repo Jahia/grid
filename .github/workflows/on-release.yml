@@ -21,6 +21,13 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     steps:
+      # This was needed on our older codebases, do not add this to 
+      # recent/newly created codebases
+      - name: Add safe directory
+        shell: bash
+        run: |
+          git config --global --add safe.directory /__w/grid/grid
+    
       # Providing the SSH PRIVATE of a user part of an admin group
       # is necessary to bypass PR checks
       - uses: actions/checkout@v3
@@ -43,6 +50,7 @@ jobs:
           github_api_token: ${{ secrets.GH_API_TOKEN }}
           nexus_username: ${{ secrets.NEXUS_USERNAME }}
           nexus_password: ${{ secrets.NEXUS_PASSWORD }}
+          slack-webhook-qa: ${{ secrets.SLACK_WEBHOOK_URL_RC_FOR_QA }}
 
       - uses: jahia/jahia-modules-action/update-signature@v2
         with:
